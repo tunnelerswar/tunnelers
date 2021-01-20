@@ -31,10 +31,10 @@
                     <a class="u_war" href="https://catwar.su">Мой кот/кошка</a> |
                     <a class="u_war" href="https://catwar.su/blog14264">Блог Туннелеров</a>
                     <br>
-                    <a class="u_war" href="/plan_1.png">План 1</a> |
-                    <a class="u_war" href="/plan_drob_1.png">План дроби 1</a> |
-                    <a class="u_war" href="/plan_2.png">План 2</a> |
-                    <a class="u_war" href="/plan_drob_2.png">План дроби 2</a>
+                    <a class="u_war" href="plan_1.png">План 1</a> |
+                    <a class="u_war" href="plan_drob_1.png">План дроби 1</a> |
+                    <a class="u_war" href="plan_2.png">План 2</a> |
+                    <a class="u_war" href="plan_drob_2.png">План дроби 2</a>
                 </div>
             </center>
             
@@ -215,6 +215,23 @@
         </tr>
     </table>
     <script>
+        //поиск
+        function searchFunction() {
+  let input, filter, ul, li, a, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("name");
+  li = ul.getElementsByTagName("li");
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
         //быстрый набор
         $("#probel").click(function(){$("#gather_text").val($("#gather_text").val() + " ")});
         $("#one").click(function(){$("#gather_text").val($("#gather_text").val() + "1 ")});
@@ -329,6 +346,67 @@
     </form>
     </center>
 </div>
+<script>
+let ordinary = 45;
+let lkey = 43;
+let stump = 41;
+let cheese = 25;
+let min = " мин. ";
+let sec = " сек.";
+let errorCalculator = "Ошибка!";
+
+function calculatorOsn(form){
+let per = form.per.value;
+
+if (per == false || isNaN(per)) {
+document.getElementById("error_1").innerHTML = errorCalculator;
+form.result_1.value = "";
+form.result_2.value = "";
+form.result_3.value = "";
+form.result_4.value = "";
+}
+
+else {
+document.getElementById("error_1").innerHTML = "";
+    
+let result_1_min = per * ordinary / 60;
+let result_1_sec = per * ordinary % 60;
+    
+let result_2_min = per * lkey / 60;
+let result_2_sec = per * lkey % 60;
+
+let result_3_min = per * stump / 60;
+let result_3_sec = per * stump % 60;
+    
+let result_4_min = per * cheese / 60;
+let result_4_sec = per * cheese % 60;
+    
+form.result_1.value = Math.floor(result_1_min) + min + Math.abs(result_1_sec) + sec + " - обычный переход";
+form.result_2.value = Math.floor(result_2_min) + min + Math.abs(result_2_sec) + sec + " - переход с клавой";
+form.result_3.value = Math.floor(result_3_min) + min + Math.abs(result_3_sec) + sec + " - переход с пнём";
+form.result_4.value = Math.floor(result_4_min) + min + Math.abs(result_4_sec) + sec + " - переход с сыром";
+}
+}
+
+function calculatorDop(form){
+let perDop = form.per_dop.value;
+let timePerDop = form.time_per_dop.value;
+
+if (perDop == false || isNaN(perDop) || timePerDop == false || isNaN(timePerDop)) {
+document.getElementById("error_2").innerHTML = errorCalculator;
+form.result_1_dop.value = "";
+}
+
+else {
+document.getElementById("error_2").innerHTML = "";
+
+let result_1_min_dop = perDop * timePerDop / 60;
+let result_1_sec_dop = perDop * timePerDop % 60;
+    
+form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1_sec_dop) + sec;
+}
+}
+</script>
 
 <!-- список участников отряда -->
 <div id="list_tunnelers">
