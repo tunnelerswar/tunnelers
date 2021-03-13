@@ -82,42 +82,16 @@
                     </script>
                 </td>
                 <td>
-                    <h3>Кнопки сбора</h3>
-                    <div id="button">
-                        <button id="one">1</button>
-                        <button id="two">2</button>
-                        <button id="three">3</button>
-                        <button id="four">4</button>
-                        <button id="five">5</button>
-                        <button id="six">6</button>
-                        <button id="seven">7</button>
-                        <button id="eight">8</button>
-                        <button id="nine">9</button>
-                        <button id="ten">10</button>
-                        <button id="eleven">11</button>
-                        <button id="twelve">12</button>
-                        <button id="thirteen">13</button>
-                        <button id="fourteen">14</button>
-                        <button id="fifteen">15</button>
-                        <button id="sixteen">16</button>
-                        <button id="seventeen">17</button>
-                        <button id="eighteen">18</button>
-                        <button id="and">и</button>
-                        <button id="tir">-</button>
-                        <button id="tz">;</button>
-                        <button id="toch">.</button>
-                        <button id="probel">Пробел</button>
-                    </div>
-                    
+                    <h3>Кнопки сбора</h3> 
                     <div id="button_gather">
-                        <button id="razd">Раздача в n</button>
+                        <button id="mog_popr">Можете попросить</button>
+                        <button id="razd">Раздача</button>
                         <button id="smena">Смена карты</button>
                         <button id="it_day">Итоги дня</button>
-                        <button id="it_uch">участок: +</button>
-                        <button id="it_col_day">Кол-во за день:</button>
-                        <button id="it_uch_razb_g">Разбирайте уч (з)</button>
-                        <button id="it_uch_razb_y">Разбирайте уч (ж)</button>
-                        <button id="mog_popr">Можете попросить</button>
+                        <button id="it_uch">Участок: +n</button>
+                        <button id="it_col_day">Общее кол-во за день</button>
+                        <button id="it_uch_razb_g">Участки (План 1)</button>
+                        <button id="it_uch_razb_y">Участки (План 2)</button>
                     </div>
                     
                     <div id="button_name">
@@ -230,29 +204,6 @@
   }
 }
         //быстрый набор
-        $("#probel").click(function(){$("#gather_text").val($("#gather_text").val() + " ")});
-        $("#one").click(function(){$("#gather_text").val($("#gather_text").val() + "1 ")});
-        $("#two").click(function(){$("#gather_text").val($("#gather_text").val() + "2 ")});
-        $("#three").click(function(){$("#gather_text").val($("#gather_text").val() + "3 ")});
-        $("#four").click(function(){$("#gather_text").val($("#gather_text").val() + "4 ")});
-        $("#five").click(function(){$("#gather_text").val($("#gather_text").val() + "5 ")});
-        $("#six").click(function(){$("#gather_text").val($("#gather_text").val() + "6 ")});
-        $("#seven").click(function(){$("#gather_text").val($("#gather_text").val() + "7 ")});
-        $("#eight").click(function(){$("#gather_text").val($("#gather_text").val() + "8 ")});
-        $("#nine").click(function(){$("#gather_text").val($("#gather_text").val() + "9 ")});
-        $("#ten").click(function(){$("#gather_text").val($("#gather_text").val() + "10 ")});
-        $("#eleven").click(function(){$("#gather_text").val($("#gather_text").val() + "11 ")});
-        $("#twelve").click(function(){$("#gather_text").val($("#gather_text").val() + "12 ")});
-        $("#thirteen").click(function(){$("#gather_text").val($("#gather_text").val() + "13 ")});
-        $("#fourteen").click(function(){$("#gather_text").val($("#gather_text").val() + "14 ")});
-        $("#fifteen").click(function(){$("#gather_text").val($("#gather_text").val() + "15 ")});
-        $("#sixteen").click(function(){$("#gather_text").val($("#gather_text").val() + "16 ")});
-        $("#seventeen").click(function(){$("#gather_text").val($("#gather_text").val() + "17 ")});
-        $("#eighteen").click(function(){$("#gather_text").val($("#gather_text").val() + "18 ")});
-        $("#and").click(function(){$("#gather_text").val($("#gather_text").val() + "и ")});
-        $("#tir").click(function(){$("#gather_text").val($("#gather_text").val() + "- ")});
-        $("#tz").click(function(){$("#gather_text").val($("#gather_text").val() + ";")});
-        $("#toch").click(function(){$("#gather_text").val($("#gather_text").val() + ".")});
         $("#razd").click(function(){$("#gather_text").val($("#gather_text").val() + "❗ Итоги и раздача в n минут")});
         $("#smena").click(function(){$("#gather_text").val($("#gather_text").val() + "❗СМЕНА КАРТЫ❗")});
         $("#it_day").click(function(){$("#gather_text").val($("#gather_text").val() + "Итоги дня")});
