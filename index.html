@@ -85,6 +85,8 @@
                     <h3>Кнопки сбора</h3> 
                     <div id="button_gather">
                         <button id="mog_popr">Можете попросить</button>
+                        <button id="g_uch">Участки - чел (План 1)</button>
+                        <button id="y_uch">Участки - чел (План 2)</button>
                         <button id="razd">Раздача</button>
                         <button id="smena">Смена карты</button>
                         <button id="it_day_g">Итоги дня (План 1)</button>
@@ -218,6 +220,27 @@
 Разбирайте участки: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18.
 `)});
         $("#mog_popr").click(function(){$("#gather_text").val($("#gather_text").val() + "@all можете попросить: ")});
+        $("#g_uch").click(function(){$("#gather_text").val($("#gather_text").val() + `1 и 2 - 
+3 и 4 - 
+5 и 6 - 
+7 и 8 - 
+9 и 10 - 
+11 и 12 - 
+13 и 14 - 
+15 и 16 -
+
+`)});
+        $("#y_uch").click(function(){$("#gather_text").val($("#gather_text").val() + `1 и 2 - 
+3 и 4 - 
+5 и 6 - 
+7 и 8 - 
+9 и 10 - 
+11 и 12 - 
+13 и 14 - 
+15 и 16 -
+17 и 18 - 
+
+`)});
         //участники
         $("#id_665780").click(function(){$("#gather_text").val($("#gather_text").val() + "@id310470985 (Бесчестный);")});
         $("#id_558232").click(function(){$("#gather_text").val($("#gather_text").val() + "@id549802204 (Огнедышащий);")});
