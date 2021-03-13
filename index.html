@@ -87,12 +87,8 @@
                         <button id="mog_popr">Можете попросить</button>
                         <button id="razd">Раздача</button>
                         <button id="smena">Смена карты</button>
-                        <button id="it_day">Итоги дня</button>
-                        <button id="it_uch">Участок: +n</button>
-                        <button id="it_col_day">Общее кол-во за день</button>
-                        <button id="it_uch_razb_g">Участки (План 1)</button>
-                        <button id="it_uch_razb_y">Участки (План 2)</button>
-                        <button id="test">test</button>
+                        <button id="it_day_g">Итоги дня (План 1)</button>
+                        <button id="it_day_y">Итоги дня (План 2)</button>
                     </div>
                     
                     <div id="button_name">
@@ -207,11 +203,18 @@
         //быстрый набор
         $("#razd").click(function(){$("#gather_text").val($("#gather_text").val() + "❗ Итоги и раздача в n минут")});
         $("#smena").click(function(){$("#gather_text").val($("#gather_text").val() + "❗СМЕНА КАРТЫ❗")});
-        $("#it_day").click(function(){$("#gather_text").val($("#gather_text").val() + "Итоги дня")});
-        $("#it_uch").click(function(){$("#gather_text").val($("#gather_text").val() + " участок: +.")});
-        $("#it_col_day").click(function(){$("#gather_text").val($("#gather_text").val() + "Общее количество паутины за день: 0.")});
-        $("#it_uch_razb_g").click(function(){$("#gather_text").val($("#gather_text").val() + "Разбирайте участки: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.")});
-        $("#it_uch_razb_y").click(function(){$("#gather_text").val($("#gather_text").val() + "Разбирайте участки: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18.")});
+        $("#it_day_g").click(function(){$("#gather_text").val($("#gather_text").val() + `Итоги дня
+ участок: +;
+ участок: +.
+Общее количество паутины за день: n.
+
+Разбирайте участки: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.`)});
+        $("#it_day_y").click(function(){$("#gather_text").val($("#gather_text").val() + `Итоги дня
+ участок: +;
+ участок: +.
+Общее количество паутины за день: n.
+
+Разбирайте участки: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18.`)});
         $("#mog_popr").click(function(){$("#gather_text").val($("#gather_text").val() + "@all можете попросить: ")});
         //участники
         $("#id_665780").click(function(){$("#gather_text").val($("#gather_text").val() + "@id310470985 (Бесчестный);")});
